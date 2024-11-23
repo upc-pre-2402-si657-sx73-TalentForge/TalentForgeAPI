@@ -28,8 +28,10 @@ public class FromZeroApiApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:4200")
-						.allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**")
+						.allowedOrigins("http://localhost:4200", "https://fromzero-77cf7.web.app")
+						.allowedMethods("*")
+						.allowedHeaders("*");
 			}
 		};
 	}
